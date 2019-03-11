@@ -17,7 +17,7 @@ $response = $bot->pushMessage($pushID, $textMessageBuilder);
 $data = file_get_contents('http://apecpv.cmru.ac.th:1880/erdibot');
 $character = json_decode($data);
 
-echo $character;
+var_dump($character->data);
 
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
