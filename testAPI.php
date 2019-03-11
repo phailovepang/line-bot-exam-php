@@ -1,6 +1,4 @@
-// Create a curl handle
-// ตัวเลขไอดี เราใช้ตัวแปรมาแทน ได้น่ะครับ 
-//  Initiate curl
+<?php
 $ch = curl_init();
 // Disable SSL verification
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
