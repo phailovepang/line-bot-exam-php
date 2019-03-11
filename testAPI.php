@@ -1,5 +1,5 @@
 
 <?php
-$homepage = file_get_contents('127.0.0.1:1880/erdibot');
-echo $homepage;
+$homepage = file_get_contents('http://apecpv.cmru.ac.th:1880/erdibot');
+var_dump ($homepage);
 ?>
