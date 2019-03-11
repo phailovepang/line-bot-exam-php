@@ -13,7 +13,10 @@ $pushID = 'Ub5bd2d0b18e3e8f76cd94e897f05c654';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Hello i am CIPHER');
+$data = file_get_contents('http://apecpv.cmru.ac.th:1880/erdibot');
+$character = json_decode($data);
+
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($character->data);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
