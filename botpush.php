@@ -12,7 +12,7 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 $data = file_get_contents('http://apecpv.cmru.ac.th:1880/erdibot');
-$character = json_decode($data);
+$character = json_decode("HELLO");
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($character[0]->data);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
